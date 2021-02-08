@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="C:\Users\Felipe\Desktop\onlite tutoriais\JS Mousemove\style\Untitled-2.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<script type="text/javascript">
+document.addEventListener("mousemove" , function(e){
+var body = document.querySelector('body');
+var bubbles = document.createElement("span");
+var X = e.offsetX;
+var Y = e.offsetY;
+bubbles.style.left = X+'px';
+bubbles.style.top = Y+'px';
+var size = Math.random() *300;
+bubbles.style.width = size+'px';
+bubbles.style.height = size+'px';
+body.appendChild(bubbles);
+
+setTimeout (function(){
+bubbles.remove();
+
+},4000)
+
+})
+
+
+</script>
+
+</body>
+</html>
